@@ -41,7 +41,7 @@ You can write directly in the `outputFile` to generate specific markdown.
 ```sh
 cd present_simu/_simu
 ln -s /tmp/user/feelpp/<...>/*md .
-                              jekyll serve
-                              ```
+jekyll serve
+```
 
-                              and open in a browser [http://localhost:4000](http://localhost:4000)
+and open in a browser [http://localhost:4000](http://localhost:4000)
