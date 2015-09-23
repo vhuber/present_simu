@@ -1,4 +1,4 @@
-# How to locally render a simulation
+# How to (locally) render a simulation
 ## Clone that repository and install jekyll
 ```sh
 git clone https://github.com/vhuber/present_simu
@@ -41,7 +41,10 @@ You can write directly in the `outputFile` to generate specific markdown.
 ```sh
 cd present_simu/_simu
 ln -s /tmp/user/feelpp/<...>/*md .
+cd ..
 jekyll serve
 ```
 
 and open in a browser [http://localhost:4000](http://localhost:4000)
+
+You can also use `jekyll build` to generate the website and then copy it somewhere (in `_public_html` ?)
