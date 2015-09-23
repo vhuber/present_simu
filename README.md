@@ -1,5 +1,10 @@
 # How to locally render a simulation
-
+## Clone that repository and install jekyll
+```sh
+git clone https://github.com/vhuber/present_simu
+brew install ruby
+gem install jekyll
+```
 ## In your code
   ```cpp
 if ( Environment::worldComm().isMasterRank()  )
@@ -34,7 +39,6 @@ You can write directly in the `outputFile` to generate specific markdown.
 
 ## Once executed
 ```sh
-git clone https://github.com/vhuber/present_simu
 cd present_simu/_simu
 ln -s /tmp/user/feelpp/<...>/*md .
                               jekyll serve
