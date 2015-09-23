@@ -1,0 +1,27 @@
+<header class="site-header">
+
+<div class="wrapper">
+
+	<a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+	{% assign current = page.url | downcase | split: '/' %}
+
+	<nav class="site-nav">
+	{% unless page.layout == 'front' %}
+	<ul class="navigation">
+		{% for link in site.navigation %}
+		{% assign current = nil %}
+		{% if page.url == link.url or page.layout == link.layout %}
+		{% assign current = 'current' %}
+		{% endif %}
+
+		<li class="{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
+		<a class="{{ current }}" href="{{ link.url| prepend: site.baseurl }}">{{ link.text }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+	{% endunless %}
+	</nav>
+
+</div>
+
+</header>
