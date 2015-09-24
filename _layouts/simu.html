@@ -8,15 +8,7 @@ layout: default
   <ul class="post-list">
     {% for simu in site.simu %}
     <li>
-      <span class="post-meta">{{ simu.url }}</span>
-
-      <h2>
-        <a class="post-link" href="{{ simu.url | prepend: site.baseurl }}">{{ simu.url }}</br>
-          <div style="font-size:60%; color:black">
-            {{ post.content | strip_html | truncatewords:25}}
-          </div>
-        </a>
-      </h2>
+      <h2><a class="post-link" href="{{ simu.url | prepend: site.baseurl }}">{{ simu.title }}</a></h2>
     </li>
     {% endfor %}
   </ul>
